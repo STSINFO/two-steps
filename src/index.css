@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: #22177a;
+  color: #e9e8f2;
+}
+
+header,
+footer,
+.content {
+  max-width: 130rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.4rem 0;
+  font-weight: 600;
+}
+
+header nav {
+  width: 30%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 9.6rem 7rem;
+  font-size: 1.8rem;
+  background-color: #e9e8f2;
+  color: #0a0725;
+}
+
+.content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 4.8rem;
+}
+
+.content p {
+  line-height: 1.8;
+  letter-spacing: 0.7px;
+}
+
+.content form {
+  margin-top: 4.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 9.6rem;
+  row-gap: 4.8rem;
+  /* gap: 9.6rem; */
+}
+.content button {
+  /* margin-top: 4.8rem; */
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  padding: 1.6rem 3.2rem;
+  background-color: #22177a;
+  color: #e9e8f2;
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.content button:hover {
+  background-color: hsl(247, 68%, 18%);
+  color: hsl(246, 28%, 99%);
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.content input,
+.content select,
+.control textarea {
+  flex: 1;
+  font-size: inherit;
+  padding: 6px;
+  border: none;
+  background-color: white;
+}
+
+.content label {
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.content form .form-2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.2rem;
+}
+
+footer {
+  background-color: #bdb9d7;
+  text-align: center;
+  padding: 4.8rem 0;
+  font-size: 0.9em;
+  color: #03020c;
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+}
