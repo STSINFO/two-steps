@@ -19,12 +19,6 @@ body {
 }
 
 header,
-footer {
-  background-color: #22177a;
-  color: #e9e8f2;
-}
-
-header,
 footer,
 .content {
   max-width: 130rem;
@@ -38,6 +32,8 @@ header {
   align-items: center;
   padding: 2.4rem 0;
   font-weight: 600;
+  background-color: #22177a;
+  color: #a7a2ca;
 }
 
 header nav {
@@ -61,18 +57,19 @@ nav ul {
   padding: 9.6rem 7rem;
   font-size: 1.8rem;
   background-color: #e9e8f2;
-  color: #0a0725;
+  color: #555;
 }
 
 .content h1 {
-  font-size: 3.2rem;
+  font-size: 4.8rem;
   font-weight: 700;
   margin-bottom: 4.8rem;
+  letter-spacing: -0.7px;
 }
 
 .content p {
-  line-height: 1.8;
-  letter-spacing: 0.7px;
+  line-height: 2;
+  letter-spacing: 0.5px;
 }
 
 .content form {
@@ -102,9 +99,9 @@ nav ul {
 
 .control {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  gap: 3.2rem;
+  gap: 2rem;
 }
 
 .content input,
@@ -112,13 +109,14 @@ nav ul {
 .control textarea {
   flex: 1;
   font-size: inherit;
-  padding: 6px;
+  padding: 0.8rem 1.6rem;
   border: none;
-  background-color: white;
+  background-color: #bdb9d7;
+  color: #888;
 }
 
 .content label {
-  font-size: inherit;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
@@ -131,10 +129,7 @@ nav ul {
 footer {
   background-color: #bdb9d7;
   text-align: center;
-  padding: 4.8rem 0;
-  font-size: 0.9em;
-  color: #03020c;
-  margin-top: auto;
-  position: relative;
-  bottom: 0;
+  padding: 3.2rem 0;
+  font-size: 1.4rem;
+  color: #555;
 }

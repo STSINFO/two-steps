@@ -3,10 +3,19 @@ import { useOutletContext, useNavigate } from "react-router-dom";
 
 export default function Step1() {
   const navigate = useNavigate();
-  const { formData, handleChange } = useOutletContext();
+  const { formData, errors, setErrors, handleChange } = useOutletContext();
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(formData);
+    const newErrors = {};
+    if (!formData.date) newErrors.date = "Date is required";
+    if (!formData.time) newErrors.time = "time is required";
+    if (!formData.number) newErrors.number = "number is required";
+    if (!formData.occasion) newErrors.occasion = "occasion is required";
+    if (Object.keys(newErrors).length > 0) {
+      setErrors((prev) => ({ ...prev, newErrors }));
+    }
+    setErrors({});
+    console.log(errors);
     navigate("/booking/Step2");
   };
   const [times, setTimes] = useState([
@@ -30,6 +39,7 @@ export default function Step1() {
               value={formData.date}
               onChange={handleChange}
             />
+            {errors.date && <p>{errors.date}</p>}
           </div>
           <div className="control">
             <label htmlFor="time">Time</label>
@@ -40,6 +50,7 @@ export default function Step1() {
               value={formData.time}
               onChange={handleChange}
             />
+            {errors.time && <p>{errors.time}</p>}
           </div>
         </div>
         <div className="control">
@@ -66,15 +77,7 @@ export default function Step1() {
             <option value="anniversary">Anniversary</option>
           </select>
         </div>
-        <button
-          disabled={
-            !formData.date ||
-            !formData.time ||
-            !formData.number ||
-            !formData.occasion
-          }
-          type="submit"
-        >
+        <button disabled={errors.date} type="submit">
           Reserve a Table
         </button>
       </form>

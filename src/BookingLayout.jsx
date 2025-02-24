@@ -13,6 +13,7 @@ export default function BookingLayout() {
     phone: "",
     specailRequest: "",
   });
+  const [errors, setErrors] = useState({});
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
@@ -23,7 +24,9 @@ export default function BookingLayout() {
 
   return (
     <div>
-      <Outlet context={{ formData, setFormData, handleChange }} />
+      <Outlet
+        context={{ formData, setFormData, errors, setErrors, handleChange }}
+      />
     </div>
   );
 }
